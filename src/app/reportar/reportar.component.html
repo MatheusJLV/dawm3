@@ -1,0 +1,283 @@
+<div class = "container">
+    <h1>Reporte</h1>
+    <div>
+      <div class="row">
+        <h2 class="col-12">Tipo de denuncia:</h2>
+        <div id="Contenedor_tipos_btn" class="col-12">
+          <button id="transito_btn" class='tipodenuncia_btn'>
+            <img class="iconobtn" src="../../assets/Recursos/iconos/transit.png">
+            tránsito
+          </button>
+          <button id="robo_btn" class='tipodenuncia_btn'>
+            <img class="iconobtn" src="../../assets/Recursos/iconos/thief.png">
+            robo
+          </button>
+          <button id="asesinato_btn" class='tipodenuncia_btn'>
+            <img class="iconobtn" src="../../assets/Recursos/iconos/murder.png">
+            asesinato
+          </button>
+          <button id="rinia_btn" class='tipodenuncia_btn'>
+            <img class="iconobtn" src="../../assets/Recursos/iconos/fight.png">
+            riña
+          </button>
+          <button id="violencia_btn" class='tipodenuncia_btn'>
+            <img class="iconobtn" src="../../assets/Recursos/iconos/violence.png">
+            violencia doméstica
+          </button>
+        </div>
+
+        <div id="Contenedor_reportar_transito" class="col-12">
+
+          <h3>Datos del incidente de tránsito</h3>
+          
+          <form>
+
+            <label for="transito_rapido">Si no dispone del tiempo necesario para llenar el formulario, marque la siguiente casilla y <a href="#transito_enviar">envíe el formulario</a></label>
+            <input type="checkbox" id="transito_rapido" name="transito_rapido" value="rapido"><br>
+
+            <label for="transito_vehiculos">Seleccione los tipos de vehiculos involucrados en el incidente</label><br>
+            <button type="button" id="motobtn" class='tipodenuncia_btn'>
+            <img class="iconobtn" src="../../assets/Recursos/iconos/moto.png">
+            motos
+            </button>
+            <input id="motocb" type="checkbox" id="transito_moto" name="transito_vehiculos" value="moto"><br>
+            <button type="button" id="carrobtn" class='tipodenuncia_btn'>
+            <img class="iconobtn" src="../../assets/Recursos/iconos/carro.png">
+            carros
+            </button>
+            <input id="carrocb" type="checkbox" id="transito_carro" name="transito_vehiculos" value="carro"><br>
+            <button type="button" id="pesadobtn" class='tipodenuncia_btn'>
+            <img class="iconobtn" src="../../assets/Recursos/iconos/bus.png">
+            buses / camiones
+            </button>
+            <input id="pesadocb" type="checkbox" id="transito_pesado" name="transito_vehiculos" value="pesado"><br>
+            
+            
+            <label for="transito_heridos">Hay personas heridas?</label><br>
+            <input type="radio" id="transito_heridos_desconocidos_rd" name="transito_heridos" value="desconocido">desconocido<br>
+            <input type="radio" id="transito_heridos_no_rd" name="transito_heridos" value="ninguno">No<br>
+            <input type="radio" id="transito_heridos_si_rd" name="transito_heridos" value="conocido">Si<br>
+            <label for="transito_num_heridos">De ser posible, indicar el numero:</label><br>
+            <input type="number" id="transito_num_heridos" name="transito_num_heridos"><br>
+
+            <label for="transito_peligro">Hay riesgo de incendio o derrame de materiales en la vía</label>
+            <input type="checkbox" id="transito_peligro" name="transito_peligro" value="peligro"><br>
+
+            <label for="transito_bloqueo">El accidente causó bloqueo total de la vía</label>
+            <input type="checkbox" id="transito_bloqueo" name="transito_bloqueo" value="bloqueo"><br>
+
+            <label for="transito_danio">Hay daños materiales a propiedad publica</label>
+            <input type="checkbox" id="transito_danio" name="transito_danio" value="Danio"><br>
+
+            <label for="transito_fuga">Se ha escapado alguno de los involucrados</label>
+            <input type="checkbox" id="transito_" name="transito_fuga" value="fuga"><br>
+
+            <label for="transito_grua">Se necesita el servicio de grua</label>
+            <input type="checkbox" id="transito_grua" name="transito_grua" value="grua"><br>
+
+            <label for="transito_comentarios">Informacion adicional:</label><br>
+            <textarea id="transito_comentarios" name="transito_comentarios" rows="3" cols="50"></textarea>
+            <br>
+            
+              
+            <input id="transito_enviar" type="submit" value="Submit">
+            
+          </form> 
+        </div>
+
+        <div id="Contenedor_reportar_robo" class="col-12">
+          <h3>Datos del incidente del robo</h3>
+          <form>
+            <label for="homicidio_rapido">Si no dispone del tiempo necesario para llenar el formulario, marque la siguiente casilla y <a href="#">envíe el formulario</a></label>
+            <input type="checkbox" id="rinia_rapido" name="rinia_rapido" value="rapido"><br>
+            <div>
+            Provincia del robo: <input type="text" required/>
+            </div>
+
+            <div>
+            Cantón del robo: <input type="text" required/>
+            </div>
+            Describa la circunstancia del suceso:
+            <div>
+              <textarea></textarea>
+            </div>
+            <div>
+              <label for="fecharobo">Fecha del robo: </label>
+              <input type="date" id="fecharobo" name="fecharobo" required/>
+            </div>
+            <input id="robo_enviar" type="submit" value="Submit">
+          </form>
+        </div>
+
+        <div id="Contenedor_reportar_asesinato" class="col-12">
+          <h3>Datos del homicidio</h3>
+          
+          <form>
+
+            <label for="homicidio_rapido">Si no dispone del tiempo necesario para llenar el formulario, marque la siguiente casilla y <a href="#homicidio_enviar">envíe el formulario</a></label>
+            <input type="checkbox" id="rinia_rapido" name="rinia_rapido" value="rapido"><br>
+
+
+            <label for="homicidio_sospechosas">Hay personas sospechosas?</label><br>
+            <input type="radio" id="homicidio_personas_sospechosas_rd" name="homicidio_sospechosas" value="desconocido">desconocido<br>
+            <input type="radio" id="homicidio_sospechosas_no_rd" name="homicidio_sospechosas" value="ninguno">No<br>
+            <input type="radio" id="homicidio_sospechosas_si_rd" name="homicidio_sospechosas" value="conocido">Si<br>
+            <label for="homicidio_num_sospechosos">De ser posible, indicar el numero:</label><br>
+            <input type="number" id="homicidio_num_sospechosas" name="homicidio_num_sospechosas"><br>
+
+
+            <label for="homicidio_fuga">Se ha escapado el involucrado: </label>
+            <input type="checkbox" id="homicidio_fuga" name="homicidio_fuga" value="fuga"><br>
+            <h5>Informacion del homicida</h5>
+            <div>
+           Raza/Color:
+           <div class="form-check form-check-inline"><label class="form-check-label"> <input class="form-check-input" type="radio" id="inlineRadio1" name="val"> blanco</label></div>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inlineRadio2" name="val"> negro</label>
+            </div>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inlineRadio3" name="val"> indio </label>
+            </div>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inlineRadio4" name="val"> mestizo</label>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inlineRadio5" name="val"> otro</label>
+            </div>
+            </div>
+        </div>
+        <div>
+           Estatura/Tamaño:
+           <div class="form-check form-check-inline"><label class="form-check-label"> <input class="form-check-input" type="radio" id="inline2Radio1" name="val"> alto</label></div>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inline2Radio2" name="val"> medio</label>
+            </div>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inline2Radio3" name="val"> bajo </label>
+            </div>
+        </div>
+        <div>
+           Tatuajes/marcas:
+           <div class="form-check form-check-inline"><label class="form-check-label"> <input class="form-check-input" type="radio" id="inline3Radio1" name="val"> si</label></div>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inline3Radio2" name="val"> no</label>
+            </div>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inline2Radio3" name="val"> desconocido </label>
+            </div>
+        </div>
+            <label for="homicidio_comentarios">Informacion adicional:</label><br>
+            <textarea id="homicidio_comentarios" name="homicidiocomentarios" rows="3" cols="50"></textarea>
+            <br>
+
+              
+            <input id="homicidio_enviar" type="submit" value="Submit">
+            
+            </form>
+
+        </div>
+
+        <div id="Contenedor_reportar_rinia" class="col-12">
+          <h3>Datos de la riña</h3>
+          
+          <form>
+
+            <label for="rinia_rapido">Si no dispone del tiempo necesario para llenar el formulario, marque la siguiente casilla y <a href="#rinia_enviar">envíe el formulario</a></label>
+            <input type="checkbox" id="rinia_rapido" name="rinia_rapido" value="rapido"><br>
+
+            <label for="rinia_medio">Seleccione los medios de agresion visibles:</label><br>
+            <button type="button" id="fistbtn" class='tipodenuncia_btn'>
+            <img class="iconobtn" src="../../assets/Recursos/iconos/fist.png">
+            Cuerpo a cuerpo
+            </button>
+            <input id=fistcb" type="checkbox" id="rinia_fist" name="rinia_medio" value="fist"><br>
+            <button type="button" id="knifebtn" class='tipodenuncia_btn'>
+            <img class="iconobtn" src="../../assets/Recursos/iconos/knife.png">
+            cuchillo
+            </button>
+            <input id="knifecb" type="checkbox" id="rinia_knife" name="rinia_medio" value="knife"><br>
+            <button type="button" id="batbtn" class='tipodenuncia_btn'>
+            <img class="iconobtn" src="../../assets/Recursos/iconos/bat.png">
+            bate
+            </button>
+            <input id="guncb" type="checkbox" id="rinia_gun" name="rinia_medio" value="gun"><br>
+            <button type="button" id="gunbtn" class='tipodenuncia_btn'>
+            <img class="iconobtn" src="../../assets/Recursos/iconos/gun.png">
+            Arma de fuego
+            </button>
+            <input id="guncb" type="checkbox" id="rinia_gun" name="rinia_medio" value="gun"><br>
+            
+            
+            <label for="rinia_heridos">Hay personas heridas?</label><br>
+            <input type="radio" id="rinia_heridos_desconocidos_rd" name="rinia_heridos" value="desconocido">desconocido<br>
+            <input type="radio" id="rinia_heridos_no_rd" name="rinia_heridos" value="ninguno">No<br>
+            <input type="radio" id="rinia_heridos_si_rd" name="rinia_heridos" value="conocido">Si<br>
+            <label for="rinia_num_heridos">De ser posible, indicar el numero:</label><br>
+            <input type="number" id="rinia_num_heridos" name="rinia_num_heridos"><br>
+
+            <label for="rinia_fuga">Se ha escapado alguno de los involucrados: </label>
+            <input type="checkbox" id="rinia_fuga" name="rinia_fuga" value="fuga"><br>
+
+            <label for="rinia_multitud">La riña involucra a varias personas (multiples espectadores incentivando la violencia o mas de 3 personas peleando):</label>
+            <input type="checkbox" id="rinia_multitud" name="rinia_multitud" value="multitud"><br>
+
+            <label for="rinia_comentarios">Informacion adicional:</label><br>
+            <textarea id="rinia_comentarios" name="rinia_comentarios" rows="3" cols="50"></textarea>
+            <br>
+            
+              
+            <input id="rinia_enviar" type="submit" value="Submit">
+            
+          </form> 
+        </div>
+
+        <div id="Contenedor_reportar_violencia" class="col-12">
+          <h3>Datos del incidente</h3>
+          
+          <form>
+
+            <label for="violencia_rapido">Si no dispone del tiempo necesario para llenar el formulario, marque la siguiente casilla y <a href="#violencia_enviar">envíe el formulario</a></label>
+            <input type="checkbox" id="violencia_rapido" name="violencia_rapido" value="rapido"><br>
+
+
+            <label for="violencia_victima">¿La víctima fue usted o alguien más?</label><br>
+            <input type="radio" id="violencia_victima_yo" name="violencia_victima" value="yo">Yo<br>
+            <input type="radio" id="violencia_victima_alguien_mas" name="violencia_victima" value="conocido">Alguien más<br>
+
+
+            <label for="homicidio_fuga">Se ha escapado el involucrado: </label>
+            <input type="checkbox" id="homicidio_fuga" name="homicidio_fuga" value="fuga"><br>
+            <h5>Informacion del agresor</h5>
+            <div>
+           Raza/Color:
+           <div class="form-check form-check-inline"><label class="form-check-label"> <input class="form-check-input" type="radio" id="inlineRadio1" name="val"> blanco</label></div>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inlineRadio2" name="val"> negro</label>
+            </div>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inlineRadio3" name="val"> indio </label>
+            </div>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inlineRadio4" name="val"> mestizo</label>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inlineRadio5" name="val"> otro</label>
+            </div>
+            </div>
+        </div>
+        <div>
+           Estatura/Tamaño:
+           <div class="form-check form-check-inline"><label class="form-check-label"> <input class="form-check-input" type="radio" id="inline2Radio1" name="val"> alto</label></div>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inline2Radio2" name="val"> medio</label>
+            </div>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inline2Radio3" name="val"> bajo </label>
+            </div>
+        </div>
+        <div>
+           Tatuajes/marcas:
+           <div class="form-check form-check-inline"><label class="form-check-label"> <input class="form-check-input" type="radio" id="inline3Radio1" name="val"> si</label></div>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inline3Radio2" name="val"> no</label>
+            </div>
+            <div class="form-check form-check-inline"><label class="form-check-label"><input class="form-check-input" type="radio" id="inline2Radio3" name="val"> desconocido </label>
+            </div>
+        </div>
+            <label for="homicidio_comentarios">Informacion adicional:</label><br>
+            <textarea id="homicidio_comentarios" name="homicidiocomentarios" rows="3" cols="50"></textarea>
+            <br>
+
+              
+            <input id="homicidio_enviar" type="submit" value="Submit">
+            
+            </form> 
+        
+        </div>
+
+      </div>
+      </div>
+</div>
